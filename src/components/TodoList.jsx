@@ -28,11 +28,15 @@ const TodoList = () => {
         setTodos((todos) => [...todos, { task, isCompleted: false}]);
         setTask('');
     };
+    // const handleRemoveTask = (index) => {
+    //     const newTodos = [...todos];
+    //     newTodos.splice(index, 1);
+    //     setTodos(newTodos);
+    // };
     const handleRemoveTask = (index) => {
-        const newTodos = [...todos];
-        newTodos.splice(index, 1);
+        const newTodos = todos.filter((todo, todoIndex) => todoIndex !== index);
         setTodos(newTodos);
-    };
+      };
 
     return (
         <div>
