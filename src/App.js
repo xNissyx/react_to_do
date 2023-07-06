@@ -1,9 +1,12 @@
-import Todolist from './components/TodoList'
+import Todo from './components/Todo'
 
 function App() {
   return (
-    <div>
-      <Todolist />
+    <div style={{ 
+      display: 'flex',
+      justifyContent: 'center',
+    }}>
+      <Todo />
     </div>
   );
 }
