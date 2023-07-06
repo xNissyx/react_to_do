@@ -61,6 +61,11 @@ const TodoList = () => {
                      todo.isCompleted === true ? { textDecorationLine: 'line-through' } : {}
                     }
                 >
+                <input
+                  type="checkbox"
+                  checked={ todo.isCompleted }
+                  onChange={() => { handleUpdateTask(index) } }
+                />
                     { todo.task } <button onClick={()=>{ handleUpdateTask(index) }}>更新</button>
                 </li>                   
                 ))}
